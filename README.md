@@ -22,14 +22,14 @@ docker exec -it fetch_web_tool_1 bash
 To download the web page for later use
 `./fetch.py url_1 url_2 ... url_n` this command will store the specified web page locally for later use. Example run:
 ```
-./fetch.py https://github.com
+./fetch.py https://www.github.com
 ```
 
 To check the metadata of fetched web page
 `./fetch.py --metadata url` this command will show the metadata for the specified url.
 Example metadata:
 ```
-$> ./fetch --metadata https://www.github.com
+$> ./fetch.py --metadata https://www.github.com
 site: www.github.com
 num_links: 115
 images: 119
