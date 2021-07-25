@@ -37,6 +37,7 @@ class FetchWeb:
             print("Failed to download the page. Message: %s" % e)
 
     def set_metadata(self, url, response):
+        url = url.split('//')[1]
         metadata = {'site': url}
         parser = 'html.parser'
         soup = BeautifulSoup(response, parser)
@@ -46,6 +47,7 @@ class FetchWeb:
         self.redis_client.set(url, metadata)
 
     def get_metadata(self, url):
+        url = url.split('//')[1]
         metadata = self.redis_client.get(url)
         if not metadata:
             print("Metadata Not Found.")
