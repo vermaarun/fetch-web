@@ -2,14 +2,17 @@ Built with ❤️ using Python
 
 A simple command line program that can fetch web pages and saves them to disk for later retrieval and browsing.
 
+Note: All assets are not downloaded so page might not load properly during browsing.    
+
+
 ## Tech Stack
 - Python3
-- Redis
+- Redis (Used for storing metadata)
 
 ## Installation
 ### To install with Docker
 ##### Prerequisite
-- docker
+- Docker
 
 ```
 git clone https://github.com/vermaarun/fetch-web.git
@@ -19,15 +22,12 @@ docker exec -it fetch_web_tool_1 bash
 ```
 
 ## Usage
-To download the web page for later use
-`./fetch.py url_1 url_2 ... url_n` this command will store the specified web page locally for later use. Example run:
+1. To download the web page 
 ```
 ./fetch.py https://www.github.com
 ```
 
-To check the metadata of fetched web page
-`./fetch.py --metadata url` this command will show the metadata for the specified url.
-Example metadata:
+2. To check the metadata of fetched web page
 ```
 $> ./fetch.py --metadata https://www.github.com
 site: www.github.com
