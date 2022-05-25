@@ -7,7 +7,7 @@ Note: All assets are not downloaded so page might not load properly during brows
 
 ## Tech Stack
 - Python3
-- Redis (Used for storing metadata)
+- Redis (Used for storing meta data)
 
 ## Installation
 ### To install with Docker
